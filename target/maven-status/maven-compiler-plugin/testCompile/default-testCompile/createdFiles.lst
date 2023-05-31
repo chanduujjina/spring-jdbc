@@ -1,0 +1,7 @@
+com\baeldung\spring\jdbc\template\testing\EmployeeDAOIntegrationTest.class
+com\baeldung\spring\jdbc\batch\service\ProductServiceUnitTest.class
+com\baeldung\spring\jdbc\template\guide\EmployeeDAOIntegrationTest.class
+com\baeldung\spring\jdbc\template\inclause\EmployeeDAOUnitTest.class
+com\baeldung\spring\jdbc\autogenkey\GetAutoGenKeyByJDBC.class
+com\baeldung\spring\jdbc\autogenkey\GetAutoGenKeyByJDBC$SpringConfig.class
+com\baeldung\spring\jdbc\template\testing\EmployeeDAOUnitTest.class

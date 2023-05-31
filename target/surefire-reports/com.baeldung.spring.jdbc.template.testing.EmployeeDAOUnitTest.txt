@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 1.689 s <<< FAILURE! - in com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest
+whenMockJdbcTemplate_thenReturnCorrectEmployeeCount  Time elapsed: 1.037 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.ScriptStatementFailedException: 
+Failed to execute SQL script statement #1 of class path resource [com/baeldung/spring/jdbc/template/testing/test-data.sql]: INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1'); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+
+whenIdNotExist_thenReturnNull  Time elapsed: 0.212 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.ScriptStatementFailedException: 
+Failed to execute SQL script statement #1 of class path resource [com/baeldung/spring/jdbc/template/testing/test-data.sql]: INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1'); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+
+whenIdNotExist_thenThrowEmptyResultDataAccessException  Time elapsed: 0.218 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.ScriptStatementFailedException: 
+Failed to execute SQL script statement #1 of class path resource [com/baeldung/spring/jdbc/template/testing/test-data.sql]: INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1'); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+
+whenInjectInMemoryDataSource_thenReturnCorrectEmployeeCount  Time elapsed: 0.214 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.ScriptStatementFailedException: 
+Failed to execute SQL script statement #1 of class path resource [com/baeldung/spring/jdbc/template/testing/test-data.sql]: INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1'); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Column count does not match; SQL statement:
+INSERT INTO EMPLOYEE VALUES (1, 'James', 'Gosling', 'Canada','TEST','test blob1') [21002-214]
+	at com.baeldung.spring.jdbc.template.testing.EmployeeDAOUnitTest.setup(EmployeeDAOUnitTest.java:37)
+

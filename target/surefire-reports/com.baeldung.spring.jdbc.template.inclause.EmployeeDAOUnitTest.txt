@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.baeldung.spring.jdbc.template.inclause.EmployeeDAOUnitTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.949 s <<< FAILURE! - in com.baeldung.spring.jdbc.template.inclause.EmployeeDAOUnitTest
+givenSmallIdList_whenGetEmployeesFromIdList_thenReturnCorrectEmployees  Time elapsed: 1.337 s  <<< ERROR!
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT * FROM EMPLOYEE WHERE id IN (?,?,?)]; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SOURCE_MESSAGE" not found [42122-214]
+	at com.baeldung.spring.jdbc.template.inclause.EmployeeDAOUnitTest.givenSmallIdList_whenGetEmployeesFromIdList_thenReturnCorrectEmployees(EmployeeDAOUnitTest.java:44)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SOURCE_MESSAGE" not found [42122-214]
+	at com.baeldung.spring.jdbc.template.inclause.EmployeeDAOUnitTest.givenSmallIdList_whenGetEmployeesFromIdList_thenReturnCorrectEmployees(EmployeeDAOUnitTest.java:44)
+
+givenLargeIdList_whenGetEmployeesFromIdList_thenReturnCorrectEmployees  Time elapsed: 0.025 s  <<< ERROR!
+org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [SELECT * FROM EMPLOYEE WHERE id IN (SELECT id FROM employee_tmp)]; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SOURCE_MESSAGE" not found [42122-214]
+	at com.baeldung.spring.jdbc.template.inclause.EmployeeDAOUnitTest.givenLargeIdList_whenGetEmployeesFromIdList_thenReturnCorrectEmployees(EmployeeDAOUnitTest.java:68)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SOURCE_MESSAGE" not found [42122-214]
+	at com.baeldung.spring.jdbc.template.inclause.EmployeeDAOUnitTest.givenLargeIdList_whenGetEmployeesFromIdList_thenReturnCorrectEmployees(EmployeeDAOUnitTest.java:68)
+
